@@ -1,6 +1,7 @@
 angular.module('repApp').service('repService', function ($http, $q) {
 
-    var base_URL = 'http://localhost:4400/';
+    // var base_URL = 'http://localhost:4400/';
+    var base_URL = 'http://mysterious-scrubland-12490.herokuapp.com/';
 
     // GET REP DATA FROM SERVER //
     this.getRepData = function (data) {
