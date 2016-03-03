@@ -46,10 +46,8 @@ function jsonResponse(req, res, next) {
 
 app.use(express.static(__dirname + '/public'));
 
+var port = process.env.PORT || 4400;
 
-server = app.listen(4400, function() {
-  var host = server.address().address,
-      port = server.address().port;
-
-  console.log('API listening at http://%s:%s', host, port);
+app.listen(port, function () {
+    console.log('Listening on port ' + port);
 });
