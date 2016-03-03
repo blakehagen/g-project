@@ -41,7 +41,8 @@
             <h6 class="right">Party</h6>
         </div>
 
-        <div class="row" ng-repeat="rep in reps track by $index" ng-show="loaded">
+        <div class="row" id="border-bottom" ng-repeat="rep in reps track by $index" ng-show="loaded" ng-class="{highlightRep: hover}"
+        ng-mouseenter="hover = true" ng-mouseleave="hover = false">
             <h6 ng-click="repDetails(rep)" id="link">{{rep.name}}</h6>
             <div class="right" id="party">
                 <h6>{{rep.party}}</h6>

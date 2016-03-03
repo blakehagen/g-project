@@ -147,6 +147,10 @@ header {
     height: 50px;
 }
 
+#border-bottom {
+        border-bottom: 1px solid #DDD;
+    }
+
 .sub-title {
     background: #F8F8F9;
     border-radius: 6px;
@@ -161,6 +165,10 @@ header {
     }
     
 .highlight {
+    color: #2DAEEB;
+}
+
+.highlightRep  {
     color: #2DAEEB;
 }
     

@@ -211,10 +211,6 @@ angular.module('repApp').service('repService', function ($http, $q) {
             "abbreviation": "VT"
         },
         {
-            "name": "Virgin Islands",
-            "abbreviation": "VI"
-        },
-        {
             "name": "Virginia",
             "abbreviation": "VA"
         },
