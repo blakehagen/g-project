@@ -113,6 +113,14 @@ header {
     width: 140px;
 }
 
+.error:hover {
+    background: none;
+}
+
+    .error:hover p {
+        color: red;
+    }
+
     .error p {
         color: red;
         text-align: left;
