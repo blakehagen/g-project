@@ -111,6 +111,7 @@ header {
 .error {
     border: 0;
     width: 140px;
+    cursor: default;
 }
 
 .error:hover {
@@ -119,11 +120,13 @@ header {
 
     .error:hover p {
         color: red;
+        cursor: default;
     }
 
     .error p {
         color: red;
         text-align: left;
+        cursor: default;
     }
     
 /* REP DATA CONTAINER */
