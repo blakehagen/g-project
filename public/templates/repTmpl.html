@@ -1,0 +1,25 @@
+<header>
+    <h1>Who's My Representative?</h1>
+</header>
+
+<section class="input-container">
+    <form>
+        <div class="select-type">
+            <select name="singleSelect" ng-model="data.type">
+                <option value="senators">Senator</option>
+                <option value="representatives">Representative</option>
+            </select>
+        </div>
+
+        <div class="select-type state">
+            <select name="singleSelect" ng-model="data.state">
+                <option ng-repeat="state in states" value="{{state.abbreviation}}">{{state.name}}</option>
+            </select>
+        </div>
+        
+        <div class="btn" ng-click="getRepData()">
+            <p>Get My Rep</p>
+        </div>
+
+    </form>
+</section>
