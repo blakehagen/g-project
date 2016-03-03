@@ -6,6 +6,7 @@
     <form>
         <div class="select-type">
             <select name="singleSelect" ng-model="data.type">
+                <option value="">Select Type</option>
                 <option value="senators">Senator</option>
                 <option value="representatives">Representative</option>
             </select>
@@ -24,7 +25,7 @@
 <section class="rep-data-container">
     <div class="col">
         <div class="row">
-            <h3>My Representatives</h3>
+            <h3>List <span ng-show="loaded">/</span> <span class="highlight" ng-show="loaded">{{type}}</span></h3>
         </div>
         <div class="row sub-title">
             <h6>Name</h6>
@@ -35,11 +36,10 @@
             <div class="right" id="party">
                 <h6>{{rep.party}}</h6>
             </div>
-
         </div>
 
     </div>
-    <div class="col right">
+    <div class="col">
         <div class="row">
             <h3>Info</h3>
         </div>
@@ -65,10 +65,9 @@
         </div>
         <div class="row sub-title details">
             <p ng-if="!selectedRep">Web</p>
-            <p ng-if="selectedRep" id="rep-detail-text">{{selectedRep.link}}</p>
+            <a ng-href="{{selectedRep.link}}" target="_blank">
+                <p ng-if="selectedRep" id="rep-detail-text">{{selectedRep.link}}</p>
+            </a>
         </div>
     </div>
-
-
-
 </section>

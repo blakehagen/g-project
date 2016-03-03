@@ -1,22 +1,31 @@
 angular.module('repApp').service('repService', function ($http, $q) {
-    
+
     var base_URL = 'http://localhost:4400/';
-    
-    this.getRepData = function(data){
+
+    // GET REP DATA FROM SERVER //
+    this.getRepData = function (data) {
         var deferred = $q.defer();
         $http({
             method: 'GET',
             url: base_URL + data.type + '/' + data.state
-        }).then(function(response){
-            
-            deferred.resolve(response.data.results)
+        }).then(function (response) {
+            if (data.type === 'senators') {
+                response.data['type'] = 'Senators';
+            } else if (data.type === 'representatives') {
+                response.data['type'] = 'Representatives';
+            }
+            deferred.resolve(response.data)
         })
         return deferred.promise
     };
-    
-    
 
+
+    // STATE DATA //
     var states = [
+        {
+            "name": "Select State",
+            "abbreviation": null
+        },
         {
             "name": "Alabama",
             "abbreviation": "AL"
@@ -227,6 +236,7 @@ angular.module('repApp').service('repService', function ($http, $q) {
         }
     ];
 
+    // GET STATES //
     this.getStates = function () {
         return states;
     }
