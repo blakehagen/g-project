@@ -50,7 +50,7 @@ header {
 .input-container {
     height: 100px;
     margin: 0px 50px;
-    min-width: 650px;
+    min-width: 750px;
 }
 
     .select-type {
@@ -172,7 +172,7 @@ header {
 }
 
 .highlightRep  {
-    color: #2DAEEB;
+    background: rgba(45, 174, 235, 0.2);
 }
     
     .row h6 {
