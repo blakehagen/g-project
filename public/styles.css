@@ -30,6 +30,7 @@ header {
         line-height: 100px;
         font-size: 30px;
         color: #2DAEEB;
+        cursor: default;
     }
     
 .input-container {
@@ -92,5 +93,80 @@ header {
     .btn:hover p {
         color: #fff;
     }
+    
+/* REP DATA CONTAINER */
 
+.rep-data-container {
+    /*border: 1px solid red;*/
+    margin: 0 50px;
+    text-align: left;
+}
 
+.col {
+    width: 49%;
+    /*border: 1px solid blue;*/
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+
+.right {
+    float: right;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.row {
+    vertical-align: top;
+    height: 50px;
+}
+
+.sub-title {
+    background: #F8F8F9;
+    border-radius: 6px;
+}
+
+    .row h3 {
+        font-weight: 300;
+        font-size: 26px;
+        line-height: 50px;
+        padding-left: 2px;
+        cursor: default;
+    }
+    
+    .row h6 {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 50px;
+        display: inline-block;
+        margin: 0 50px;  
+        cursor: default;
+    }
+    
+#link {
+    cursor: pointer;
+}
+    
+    #party h6 {
+        margin: 0;
+        padding-right: 64px;
+    }
+    
+.details {
+    margin-bottom: 14px;
+    border-radius: 6px;
+}
+
+    .details p {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 50px;
+        padding-left: 10px;
+        color: #aaa;
+        cursor: default;
+    }
+#rep-detail-text {
+    color: #333;
+}

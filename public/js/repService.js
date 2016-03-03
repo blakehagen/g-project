@@ -9,7 +9,7 @@ angular.module('repApp').service('repService', function ($http, $q) {
             url: base_URL + data.type + '/' + data.state
         }).then(function(response){
             
-            deferred.resolve(response.data)
+            deferred.resolve(response.data.results)
         })
         return deferred.promise
     };
@@ -24,10 +24,6 @@ angular.module('repApp').service('repService', function ($http, $q) {
         {
             "name": "Alaska",
             "abbreviation": "AK"
-        },
-        {
-            "name": "American Samoa",
-            "abbreviation": "AS"
         },
         {
             "name": "Arizona",
@@ -64,10 +60,6 @@ angular.module('repApp').service('repService', function ($http, $q) {
         {
             "name": "Georgia",
             "abbreviation": "GA"
-        },
-        {
-            "name": "Guam",
-            "abbreviation": "GU"
         },
         {
             "name": "Hawaii",
@@ -180,10 +172,6 @@ angular.module('repApp').service('repService', function ($http, $q) {
         {
             "name": "Pennsylvania",
             "abbreviation": "PA"
-        },
-        {
-            "name": "Puerto Rico",
-            "abbreviation": "PR"
         },
         {
             "name": "Rhode Island",

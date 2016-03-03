@@ -10,16 +10,65 @@
                 <option value="representatives">Representative</option>
             </select>
         </div>
-
         <div class="select-type state">
             <select name="singleSelect" ng-model="data.state">
                 <option ng-repeat="state in states" value="{{state.abbreviation}}">{{state.name}}</option>
             </select>
         </div>
-        
         <div class="btn" ng-click="getRepData()">
-            <p>Get My Rep</p>
+            <p>Get My Reps</p>
+        </div>
+    </form>
+</section>
+
+<section class="rep-data-container">
+    <div class="col">
+        <div class="row">
+            <h3>My Representatives</h3>
+        </div>
+        <div class="row sub-title">
+            <h6>Name</h6>
+            <h6 class="right">Party</h6>
+        </div>
+        <div class="row" ng-repeat="rep in reps track by $index">
+            <h6 ng-click="repDetails(rep)" id="link">{{rep.name}}</h6>
+            <div class="right" id="party">
+                <h6>{{rep.party}}</h6>
+            </div>
+
         </div>
 
-    </form>
+    </div>
+    <div class="col right">
+        <div class="row">
+            <h3>Info</h3>
+        </div>
+        <div class="row sub-title details">
+            <p ng-if="!selectedRep">First Name</p>
+            <p ng-if="selectedRep" id="rep-detail-text">{{selectedRep.first}}</p>
+        </div>
+        <div class="row sub-title details">
+            <p ng-if="!selectedRep">Last Name</p>
+            <p ng-if="selectedRep" id="rep-detail-text">{{selectedRep.last}}</p>
+        </div>
+        <div class="row sub-title details">
+            <p ng-if="!selectedRep">District</p>
+            <p ng-if="selectedRep" id="rep-detail-text">{{selectedRep.district}}</p>
+        </div>
+        <div class="row sub-title details">
+            <p ng-if="!selectedRep">Phone</p>
+            <p ng-if="selectedRep" id="rep-detail-text">{{selectedRep.phone}}</p>
+        </div>
+        <div class="row sub-title details">
+            <p ng-if="!selectedRep">Office</p>
+            <p ng-if="selectedRep" id="rep-detail-text">{{selectedRep.office}}</p>
+        </div>
+        <div class="row sub-title details">
+            <p ng-if="!selectedRep">Web</p>
+            <p ng-if="selectedRep" id="rep-detail-text">{{selectedRep.link}}</p>
+        </div>
+    </div>
+
+
+
 </section>
