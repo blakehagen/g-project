@@ -9,13 +9,14 @@ angular.module('repApp').controller('repCtrl', function ($scope, repService) {
     $scope.getRepData = function () {
         $scope.loaded = false;
         $scope.selectedRep = null;
+
         if (!$scope.data.type || !$scope.data.state) {
+            $scope.err = true;
             console.log('INPUT ERROR - INVALID SELECTION');
             return false;
         }
-        console.log($scope.data);
+        $scope.err = false;
         repService.getRepData($scope.data).then(function (response) {
-            console.log(response);
             $scope.loaded = true;
             $scope.type = response.type;
             $scope.reps = response.results;
@@ -25,6 +26,7 @@ angular.module('repApp').controller('repCtrl', function ($scope, repService) {
     // REP DETAILS //
     $scope.repDetails = function (rep) {
         $scope.selectedRep = rep;
+
         var tempNameArr = $scope.selectedRep.name.split(' ');
         $scope.selectedRep['first'] = tempNameArr[0];
         $scope.selectedRep['last'] = tempNameArr[tempNameArr.length - 1];
@@ -33,10 +35,6 @@ angular.module('repApp').controller('repCtrl', function ($scope, repService) {
             $scope.selectedRep.district = 'District ' + $scope.selectedRep.district;
         }
     }
-
-
-
-
 
 
 });
