@@ -36,6 +36,7 @@ header {
     height: 100px;
     border-bottom: 1px solid #ccc;
     margin: 0 50px;
+    min-width: 650px;;
 }
 
     header h1 {
@@ -47,9 +48,9 @@ header {
     }
     
 .input-container {
-    /*border: 1px solid red;*/
     height: 100px;
     margin: 0px 50px;
+    min-width: 650px;
 }
 
     .select-type {
@@ -123,6 +124,7 @@ header {
     /*border: 1px solid red;*/
     margin: 0 50px;
     text-align: left;
+    min-width: 1060px;
 }
 
 .col {
@@ -149,6 +151,7 @@ header {
 
 #border-bottom {
         border-bottom: 1px solid #DDD;
+        cursor: pointer;
     }
 
 .sub-title {
@@ -205,4 +208,19 @@ header {
     }
 #rep-detail-text {
     color: #333;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1360px){
+    .rep-data-container {
+        text-align: center;
+    }
+    
+    .col {
+        width: 500px;
+        margin-right: 10px;
+    }
+    
 }
